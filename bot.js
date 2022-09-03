@@ -2,7 +2,7 @@
 const { Client, GatewayIntentBits, Partials, Collection } = require("discord.js");
 const CredentialManager = require("./Src/Credentials/Config");
 const DirPath = __dirname;
-const TOK = require ("process.env.TOKEN")
+const TOK = process.env.TOKEN
 const { MessageCommandHandler, EventManager, ButtonCommandHandler, SelectMenuHandler, SlashCommandsHandler, ContextMenuHandler, ModalFormsHandler } = require("./Src/Structures/Handlers/HandlersManager")
 
 const DiscordClient = new Client({
@@ -42,7 +42,7 @@ await EventManager(DiscordClient, DirPath)
 await ButtonCommandHandler(DiscordClient, DirPath)
 await SelectMenuHandler(DiscordClient, DirPath)
 await ModalFormsHandler(DiscordClient, DirPath)
-await DiscordClient.login(TOK)
+await DiscordClient.login('TOK')
 await SlashCommandsHandler(DiscordClient, DirPath)
 await ContextMenuHandler(DiscordClient, DirPath)
 })()
