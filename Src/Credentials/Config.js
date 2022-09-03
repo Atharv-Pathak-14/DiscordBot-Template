@@ -1,5 +1,5 @@
 module.exports = {
     prefix: ["!", "AddYourPrefix"],
     developersIds: ["UserId", "UserId2"],
-    botToken: "Bot Token"
+    botToken: "process.env.TOKEN"
 }
